@@ -1,0 +1,25 @@
+# App Store配置
+app_store:
+  base_url: "https://apps.apple.com"
+  search_url: "https://apps.apple.com/search"
+  countries:
+    - code: "cn"
+      name: "中国"
+    - code: "us"
+      name: "美国"
+    - code: "jp"
+      name: "日本"
+
+app_id: 1164066737
+
+# 数据存储配置
+storage:
+  csv_dir: "data/reviews"
+  filename_template: "{app_name}_reviews_{date}.csv"
+  date_format: "%Y%m%d"
+
+# 爬虫配置
+scraper:
+  default_country: "cn"
+  request_delay: 1  # 请求延迟(秒)
+  max_retries: 3    # 最大重试次数 

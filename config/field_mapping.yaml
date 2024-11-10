@@ -1,0 +1,34 @@
+# App Store 评论数据字段映射
+app_store_review:
+  name:
+    path: "$.feed.entry[*].author.name.label"
+    alias: "用户名"
+    type: "str"
+  review_id:
+    path: "$.feed.entry[*].id.label"
+    alias: "评论ID"
+    type: "str"
+  title:
+    path: "$.feed.entry[*].title.label"
+    alias: "评论标题"
+    type: "str"  
+  content:
+    path: "$.feed.entry[*].content.label"
+    alias: "评论内容"
+    type: "str"
+  date:
+    path: "$.feed.entry[*].updated.label"
+    alias: "评论时间"
+    type: "datetime"  
+  rating:
+    path: "$.feed.entry[*]['im:rating'].label"
+    alias: "评分"
+    type: "int"
+  version:
+    path: "$.feed.entry[*]['im:version'].label"
+    alias: "APP版本"
+    type: "str"
+  vote_count:
+    path: "$.feed.entry[*]['im:voteCount'].label"
+    alias: "点赞数"
+    type: "int" 
